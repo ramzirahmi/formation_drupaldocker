@@ -1,0 +1,31 @@
+/*start style article detail*/
+.article-detail {
+  padding: 20px 0;
+  h2.text-center {
+    font-family: "Droid sans", "Lucida Grande", sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: red;
+    font-weight: 700;
+    margin-bottom: 15px;
+    a{
+      font-family: "Droid sans", "Lucida Grande", sans-serif;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: yellowgreen;
+      font-weight: 700;
+      text-decoration: none;
+    }
+  }
+  //img {
+  //  width: 100%;
+  //  padding: 10px;
+  //  height: auto;
+  //}
+  p {
+    margin-left: 12px;
+    color: #1a1919;
+    font-size: 18px;
+  }
+}
+//end style article

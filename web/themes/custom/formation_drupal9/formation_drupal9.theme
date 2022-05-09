@@ -1,0 +1,22 @@
+<?php
+
+//suggestions views
+
+function formation_drupal9_theme_suggestions_views_view_alter(array &$suggestions, array &$variables, $hook)
+{
+
+    if ($variables['view']->id() && $variables['view']->current_display) {
+        $suggestions[] = $hook . '__' . $variables['view']->id() . '__' . $variables['view']->current_display;
+
+    }
+}
+
+
+function formation_drupal9_theme_suggestions_views_view_unformatted_alter(array &$suggestions, array &$variables, $hook)
+{
+
+    if ($variables['view']->id() && $variables['view']->current_display) {
+        $suggestions[] = $hook . '__' . $variables['view']->id() . '__' . $variables['view']->current_display;
+
+    }
+}

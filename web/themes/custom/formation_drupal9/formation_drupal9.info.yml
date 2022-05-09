@@ -1,0 +1,17 @@
+name: Formation drupal 9
+type: theme
+description: 'Theme drupal 9'
+core_version_requirement: ^8 || ^9
+
+libraries:
+  - formation_drupal9/global-css
+  - formation_drupal9/global-js
+
+base theme: false
+
+regions:
+  header: 'Header'
+  content: 'Content'
+  status_message: 'Status Message'
+  footer: 'Footer'
+  disabled 	: 'Disabled'

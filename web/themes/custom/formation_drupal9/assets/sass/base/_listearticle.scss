@@ -1,0 +1,44 @@
+#block-formation-drupal9-content {
+  .views-exposed-form {
+    display: flex;
+    justify-content: start;
+    margin: 20px 0;
+    .fieldset-legend{
+      font-weight: bold;
+      color: red;
+      font-size: 22px;
+      text-transform: capitalize;
+    }
+    .form-radios {
+      display: inline-flex;
+      justify-content:center;
+
+      .js-form-type-radio {
+        margin: 10px 0;
+      }
+      label {
+        color: #b08787;
+        margin: 0 5px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+  }
+   .js-pager__items {
+     list-style: none;
+     display: flex;
+     width: fit-content;
+     margin: 30px auto;
+     border: 2px solid rebeccapurple;
+     border-radius: 10px 50px;
+     padding: 10px 50px;
+     .pager__item {
+       a{
+         color: #D7BEFD;
+         text-decoration: none;
+         font-size: 22px;
+         font-weight: bold;
+       }
+     }
+   }
+}

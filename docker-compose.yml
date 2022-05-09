@@ -1,0 +1,38 @@
+version: '3.1'
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: drupal_db
+      MYSQL_USER: drupal_db
+      MYSQL_PASSWORD: drupal_db
+
+  drupal:
+    depends_on:
+      - db
+    image: drupal:8-apache
+    ports:
+      - 8029:80
+    restart: always
+    working_dir: /var/www/html/
+    volumes:
+      - ./:/var/www/html/
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: pma
+    links:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    restart: always
+    ports:
+      - 8081:80
+volumes:
+  db_data: {}
